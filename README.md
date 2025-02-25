@@ -95,7 +95,7 @@ The final output of the hybrid QNN is a probability distribution over possible d
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/YuvikaGupta875/Yuvika-Gupta_Girl-Hackathon_SWE_2025.git
-   cd Girl-Hackathon
+   cd Yuvika-Gupta_Girl-Hackathon_SWE_2025
    ```
 2. **Install dependencies:**
    ```bash
