@@ -15,13 +15,14 @@ similar cases. This project offers the healthcare sector
 This project explores the application of quantum computing in medical diagnosis by developing a hybrid quantum-classical neural network (QNN). Using the MIMIC-III dataset, the model integrates classical machine learning with quantum computing to predict patient outcomes, diagnosing medical conditions from intensive care data. The project uses TensorFlow Quantum (TFQ) and Cirq for quantum circuit simulation, enabling the representation of complex relationships in the data that classical models may struggle to capture.
 
 ## Tech Stack
-- TensorFlow 2.15
-- TensorFlow Quantum
-- Cirq (Quantum Circuit Simulation)
-- SymPy(Symbolic Mathematics)
-- Scikit-Learn (Preprocessing & Evaluation)
-- Pandas & NumPy (Data Handling)
-- Kaggle API (Dataset Retrieval)
+- **TensorFlow 2.15**
+- **TensorFlow Quantum**
+- **Cirq** (Quantum Circuit Simulation)
+- **SymPy** (Symbolic Mathematics)
+- **Scikit-Learn** (Preprocessing & Evaluation)
+- **Pandas & NumPy** (Data Handling)
+- **Kaggle API** (Dataset Retrieval)
+
 
 # Dataset
 MIMIC-III (Medical Information Mart for Intensive Care III)
@@ -93,7 +94,7 @@ The final output of the hybrid QNN is a probability distribution over possible d
 ## Setup & Installation
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/YuvikaGupta875/Girl-Hackathon.git
+   git clone https://github.com/YuvikaGupta875/Yuvika-Gupta_Girl-Hackathon_SWE_2025.git
    cd Girl-Hackathon
    ```
 2. **Install dependencies:**
