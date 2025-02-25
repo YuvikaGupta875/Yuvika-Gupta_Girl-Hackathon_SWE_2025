@@ -14,6 +14,31 @@ similar cases. This project offers the healthcare sector
 # Phase 1 Implementation:
 This project explores the application of quantum computing in medical diagnosis by developing a hybrid quantum-classical neural network (QNN). Using the MIMIC-III dataset, the model integrates classical machine learning with quantum computing to predict patient outcomes, diagnosing medical conditions from intensive care data. The project uses TensorFlow Quantum (TFQ) and Cirq for quantum circuit simulation, enabling the representation of complex relationships in the data that classical models may struggle to capture.
 
+## Tech Stack
+- TensorFlow 2.15
+- TensorFlow Quantum
+- Cirq (Quantum Circuit Simulation)
+- SymPy(Symbolic Mathematics)
+- Scikit-Learn (Preprocessing & Evaluation)
+- Pandas & NumPy (Data Handling)
+- Kaggle API (Dataset Retrieval)
+
+# Dataset
+MIMIC-III (Medical Information Mart for Intensive Care III)
+MIMIC-III is a comprehensive, de-identified dataset comprising health-related data from patients admitted to critical care units. It contains information such as demographic data, vital signs, laboratory measurements, procedures, medications, and diagnosis codes (ICD-9).
+
+Medical Records: Over 60,000 intensive care unit (ICU) stays for more than 40,000 patients.
+ICD-9 Codes: The primary source of diagnostic labels used to train the QNN. These codes represent various medical conditions and procedures, which the model aims to predict based on patient data.
+Vital Signs and Lab Results: Used as input features in the quantum model, helping predict outcomes based on the quantum-enhanced learning.
+- **Source:** MIMIC-III (10,000 patients)
+- **Files Used:**
+  - `DIAGNOSES_ICD_random.csv` (ICD Codes for Diagnoses)
+  - `D_ICD_DIAGNOSES.csv` (ICD Code Descriptions)
+  - `PATIENTS_random.csv` (Patient Demographics)
+  - `ADMISSIONS_random.csv` (Hospital Admissions Data)
+
+
+
 # Theoretical Background:
 # Quantum Computing in Machine Learning
 Quantum computing introduces fundamentally new ways to process information through qubits, which can exist in superpositions of states (|0⟩ and |1⟩) and can be entangled with each other. This allows quantum systems to represent and compute over vast amounts of information simultaneously, opening up new possibilities for solving problems intractable for classical systems.
@@ -44,14 +69,6 @@ TensorFlow Quantum (TFQ) is a framework made by Google that integrates quantum c
 
 The classical part of the neural network is constructed using TensorFlow, while the quantum circuits (PQC) are built and simulated using Cirq. Together, they form a pipeline where classical and quantum layers cooperate to enhance the model’s diagnostic ability.
 
-# Dataset
-MIMIC-III (Medical Information Mart for Intensive Care III)
-MIMIC-III is a comprehensive, de-identified dataset comprising health-related data from patients admitted to critical care units. It contains information such as demographic data, vital signs, laboratory measurements, procedures, medications, and diagnosis codes (ICD-9).
-
-Medical Records: Over 60,000 intensive care unit (ICU) stays for more than 40,000 patients.
-ICD-9 Codes: The primary source of diagnostic labels used to train the QNN. These codes represent various medical conditions and procedures, which the model aims to predict based on patient data.
-Vital Signs and Lab Results: Used as input features in the quantum model, helping predict outcomes based on the quantum-enhanced learning.
-
 # Project Components
 #Preprocessing: The MIMIC-III dataset undergoes extensive preprocessing. Features are selected and scaled before being encoded into quantum states. A large part of this involves one-hot encoding of the ICD-9 diagnosis codes and preparing continuous medical features for quantum encoding.
 
@@ -67,6 +84,43 @@ The hybrid model is trained using a hybrid quantum-classical gradient descent me
 # Prediction: 
 The final output of the hybrid QNN is a probability distribution over possible diagnoses. The model predicts the most likely diagnosis for the patient based on their medical data.
 
-# Potential Impact and Use Cases
-The hybrid quantum-classical neural network model aims to significantly improve diagnostic accuracy in complex medical datasets. This approach, if implemented on future fault-tolerant quantum computers, could be integrated into hospital systems to assist in diagnosing critical illnesses, optimizing treatment plans, and improving patient outcomes by providing early warnings for life-threatening conditions.
-This project demonstrates a novel application of quantum machine learning in the field of medical diagnostics. Through the use of hybrid quantum-classical architectures, we can explore new ways of improving diagnostic accuracy by utilizing quantum computing’s ability to model complex, high-dimensional data. The integration of TensorFlow Quantum with classical neural networks marks a significant step forward in practical applications of quantum-enhanced machine learning in healthcare.
+## Features
+- **Quantum Neural Networks (QNNs):** Improves disease prediction accuracy using quantum circuits.
+- **Data Preprocessing:** Standardization, encoding, and train-test splits using Scikit-Learn.
+- **Automated Dataset Retrieval:** Uses Kaggle API to fetch and prepare data.
+- **Medical Diagnosis Prediction:** Leverages QNNs to analyze patient history for more accurate diagnostics.
+
+## Setup & Installation
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/YuvikaGupta875/Girl-Hackathon.git
+   cd Girl-Hackathon
+   ```
+2. **Install dependencies:**
+   ```bash
+   pip install tensorflow==2.15.0 tensorflow-quantum scikit-learn numpy pandas cirq sympy
+   ```
+3. **Download the dataset:**
+   - Create a Kaggle account & API key
+   - Upload `kaggle.json` to the working directory
+   - Run:
+     ```bash
+     !mkdir -p ~/.kaggle
+     !mv kaggle.json ~/.kaggle/
+     !chmod 600 ~/.kaggle/kaggle.json
+     !kaggle datasets download -d bilal1907/mimic-iii-10k
+     !unzip mimic-iii-10k.zip
+     ```
+
+## Running the Model
+1. **Load & preprocess data**
+2. **Train the QNN model**
+3. **Evaluate & visualize results**
+
+## Contributors
+- **Yuvika Gupta**
+
+## Future Improvements
+- **Enhancing Quantum Model Performance**
+- **Expanding Dataset for More Robust Training**
+- **Integrating with Real-World Medical Applications**
