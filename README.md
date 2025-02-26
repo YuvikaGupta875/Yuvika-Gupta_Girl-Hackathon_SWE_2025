@@ -9,7 +9,7 @@ computing which allows the processing of the complex and large-scale medical dat
 multiple calculations and analyses at the same time) which speeds up the diagnosis by a huge amount. The project is also making
 use of Google's TensorFlow quantum library which helps the system process massive amounts of patient data with unparalleled
 speed and accuracy, generating personalized treatment plan recommendations based on the quantum- enhanced analysis of
-similar cases. This project offers the healthcare sector
+similar cases. 
 
 # Phase 1 Implementation:
 This project explores the application of quantum computing in medical diagnosis by developing a hybrid quantum-classical neural network (QNN). Using the MIMIC-III dataset, the model integrates classical machine learning with quantum computing to predict patient outcomes, diagnosing medical conditions from intensive care data. The project uses TensorFlow Quantum (TFQ) and Cirq for quantum circuit simulation, enabling the representation of complex relationships in the data that classical models may struggle to capture.
